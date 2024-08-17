@@ -2,7 +2,7 @@ import { createParser } from 'eventsource-parser';
 import { OPENAI_API_KEY, KV_REST_API_URL, KV_REST_API_TOKEN } from '$env/static/private';
 import { createClient } from '@vercel/kv';
 
-const key = OPENAI_API_KEY;
+const key = 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;
 
 // Object to store the number of requests made by each user and their last request timestamp
 interface UserRequestData {
@@ -11,8 +11,8 @@ interface UserRequestData {
 }
 
 const kv = createClient({
-	url: KV_REST_API_URL,
-	token: KV_REST_API_TOKEN
+	url: 'https://artistic-mackerel-59014.upstash.io',
+	token: 'AeaGAAIjcDEyZDc1ZGY0MWFkM2I0MDkyOWU3MmY3MTg4MDljNTAxOXAxMA'
 });
 
 async function getUserRequestData(userIP: string): Promise<UserRequestData | null> {
